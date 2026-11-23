@@ -391,18 +391,35 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
 // Navbar scroll & mobile menu
 const nav = $("nav");
 const menu = $("menu");
-if (nav && !nav.classListntains("always-solid")) {
-  const onScroll = () => nav.classList.toggle("solid", scrollY > 40);
-  addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+
+function handleNavScroll() {
+  if (!nav || nav.classList.contains("always-solid")) return;
+  const scrollPos = window.scrollY || document.documentElement.scrollTop || 0;
+  if (scrollPos > 15) {
+    nav.classList.add("solid");
+  } else {
+    nav.classList.remove("solid");
+  }
+}
+
+if (nav && !nav.classList.contains("always-solid")) {
+  window.addEventListener("scroll", handleNavScroll, { passive: true });
+  document.addEventListener("scroll", handleNavScroll, { passive: true });
+  handleNavScroll(); // Jalankan langsung saat halaman dimuat
 }
 
 if ($("burger") && menu) {
-  $("burger").addEventListener("click", () => menu.classList.toggle("open"));
-  menu.addEventListener(
-    "click",
-    (e) => e.target.tagName === "A" && menu.classList.remove("open"),
-  );
+  $("burger").addEventListener("click", () => {
+    menu.classList.toggle("open");
+    // Pastikan navbar punya background saat menu mobile dibuka
+    if (nav) nav.classList.add("solid");
+  });
+  menu.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      menu.classList.remove("open");
+      handleNavScroll();
+    }
+  });
 }
 
 applyLanguage(currentLang);
