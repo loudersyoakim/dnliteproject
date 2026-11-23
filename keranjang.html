@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keranjang Belanja — DN Lite</title>
+    <link rel="preconnect" href="https://fonts.googleapism" />
+    <link rel="preconnect" href="https://fonts.gstaticm" crossorigin />
+    <link
+      href="https://fonts.googleapism/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav always-solid" id="nav">
+      <a href="index.html" class="logo" aria-label="DN Lite">
+        <img class="mark" src="images/logo-light.png" alt="Logo DN Lite" />
+        <span>LITE</span>
+      </a>
+
+      <nav id="menu">
+        <a href="index.html#home" data-i18n="nav_home">Beranda</a>
+        <a href="index.html#tentang" data-i18n="nav_about">Tentang</a>
+        <a href="index.html#produk" data-i18n="nav_products">Produk</a>
+        <a href="index.html#proses" data-i18n="nav_process">Proses</a>
+        <a href="index.html#kontak" data-i18n="nav_contact">Kontak</a>
+      </nav>
+
+      <div class="nav-right">
+        <a
+          href="keranjang.html"
+          class="cart active-cart"
+          aria-label="Keranjang pesanan"
+        >
+          <svg viewBox="0 0 24 24">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M6 6 5 3H2" />
+          </svg>
+          <b id="cartCount">0</b>
+        </a>
+        <button class="burger" id="burger" aria-label="Buka menu">Menu</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <p class="small" data-i18n="cart_eyebrow">Ringkasan Pesanan</p>
+        <h1 data-i18n="cart_title">Keranjang Belanja Anda</h1>
+      </section>
+
+      <section class="cart-section">
+        <div class="cart-layout">
+          <!-- KOLOM KIRI: DAFTAR ITEM PESANAN & TAMBAH CEPAT -->
+          <div class="cart-items-box">
+            <div class="cart-box-head">
+              <h2 data-i18n="cart_list_title">Daftar Produk Dipilih</h2>
+              <button
+                type="button"
+                class="text-btn"
+                id="clearCartBtn"
+                data-i18n="cart_clear"
+              >
+                Kosongkan Keranjang
+              </button>
+            </div>
+
+            <!-- Wadah daftar item yang dirender otomatis oleh JS -->
+            <div id="cartListContainer" class="cart-list"></div>
+
+            <!-- Tambah Cepat Varian Lain -->
+            <div class="quick-add-box">
+              <p class="small" data-i18n="cart_quick_title">
+                Tambah Varian Lain
+              </p>
+              <div class="quick-add-grid">
+                <button
+                  type="button"
+                  class="quick-item"
+                  data-add-item="Wine Coffee (Specialty) 250 gr"
+                >
+                  <span>+ Wine Coffee (Specialty)</span>
+                  <small>250 gr</small>
+                </button>
+                <button
+                  type="button"
+                  class="quick-item"
+                  data-add-item="Classic Arabika Bold (250 gr)"
+                >
+                  <span>+ Classic Arabika Bold</span>
+                  <small>250 gr</small>
+                </button>
+                <button
+                  type="button"
+                  class="quick-item"
+                  data-add-item="Classic Arabika Lite (250 gr)"
+                >
+                  <span>+ Classic Arabika Lite</span>
+                  <small>250 gr</small>
+                </button>
+                <button
+                  type="button"
+                  class="quick-item"
+                  data-add-item="Greenbeans Gayo Arabica (1 kg)"
+                >
+                  <span>+ Greenbeans</span>
+                  <small>1 kg</small>
+                </button>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem">
+              <a
+                href="index.html#produk"
+                class="btn btn-dark"
+                data-i18n="cart_back"
+              >
+                ← Kembali ke Katalog
+              </a>
+            </div>
+          </div>
+
+          <!-- KOLOM KANAN: FORM DATA PEMESAN & CHECKOUT WHATSAPP -->
+          <aside class="checkout-box">
+            <p class="small" data-i18n="chk_eyebrow">Konfirmasi Pesanan</p>
+            <h2 data-i18n="chk_title">Detail Pengiriman</h2>
+
+            <div class="summary-row">
+              <span data-i18n="chk_total_label">Total Item</span>
+              <strong id="summaryTotalQty">0 item</strong>
+            </div>
+
+            <form id="checkoutForm" class="chk-form">
+              <label>
+                <span data-i18n="chk_name_label">Nama Pemesan</span>
+                <input
+                  type="text"
+                  id="custName"
+                  placeholder="Contoh: Budi Santoso"
+                  required
+                />
+              </label>
+
+              <label>
+                <span data-i18n="chk_method_label">Metode Penerimaan</span>
+                <select id="custMethod">
+                  <option value="Pengiriman Ekspedisi / Kurir">
+                    Pengiriman Ekspedisi / Kurir
+                  </option>
+                  <option value="Ambil Langsung di Roastery">
+                    Ambil Langsung di Roastery
+                  </option>
+                </select>
+              </label>
+
+              <label>
+                <span data-i18n="chk_note_label"
+                  >Catatan Pesanan (Opsional)</span
+                >
+                <textarea
+                  id="custNote"
+                  rows="3"
+                  placeholder="Contoh: Giling halus untuk espresso / Whole bean / Alamat tujuan..."
+                ></textarea>
+              </label>
+
+              <button
+                type="submit"
+                class="btn btn-gold-solid full-btn"
+                id="orderWaBtn"
+                data-i18n="chk_submit"
+              >
+                Order Sekarang via WhatsApp
+              </button>
+            </form>
+
+            <p class="chk-hint" data-i18n="chk_hint">
+              Admin DN Lite akan mengonfirmasi total harga &amp; ongkos kirim
+              melalui WhatsApp (0853-7277-7912).
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="f-brand">
+        <a href="index.html" class="logo">
+          <img class="mark" src="images/logo-light.png" alt="" />
+          <span>LITE</span>
+        </a>
+        <p class="tag">Classic<br />Simple Luxury</p>
+      </div>
+
+      <div class="f-col">
+        <h4 data-i18n="foot_contact">Kontak &amp; Legalitas</h4>
+        <p>WhatsApp: 0853-7277-7912</p>
+        <p>Instagram: @dnlite</p>
+        <p class="mini">
+          Produced by DN Lite Coffee &amp; Ito Roastery<br />
+          Halal Certified · P-IRT 8081104010185-30
+        </p>
+      </div>
+
+      <div class="f-col">
+        <h4 data-i18n="foot_order">Pesanan Anda</h4>
+        <p id="orderNote" data-i18n="order_empty">Belum ada produk dipilih.</p>
+      </div>
+
+      <p class="copy">
+        © 2026 DN Lite — Premium Gayo Coffee. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- TOMBOL MELAYANG BAHASA (ID / EN) -->
+    <div class="lang-float" role="group" aria-label="Pilih Bahasa">
+      <button type="button" class="lang-btn active" data-lang="id">ID</button>
+      <span class="lang-sep">/</span>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

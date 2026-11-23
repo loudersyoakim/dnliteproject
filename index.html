@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DN Lite — Premium Gayo Coffee</title>
+    <meta
+      name="description"
+      content="100% Arabica Specialty, Single Origin Gayo. Wine Coffee, Classic Arabika Bold, Classic Arabika Lite, & Greenbeans."
+    />
+    <link rel="preconnect" href="https://fonts.googleapism" />
+    <link rel="preconnect" href="https://fonts.gstaticm" crossorigin />
+    <link
+      href="https://fonts.googleapism/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <a href="#home" class="logo" aria-label="DN Lite">
+        <img class="mark" src="images/logo-light.png" alt="Logo DN Lite" />
+        <span>LITE</span>
+      </a>
+
+      <nav id="menu">
+        <a href="#home" data-i18n="nav_home">Beranda</a>
+        <a href="#tentang" data-i18n="nav_about">Tentang</a>
+        <a href="#produk" data-i18n="nav_products">Produk</a>
+        <a href="#proses" data-i18n="nav_process">Proses</a>
+        <a href="#kontak" data-i18n="nav_contact">Kontak</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="#produk" class="icon-btn" aria-label="Cari produk">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg>
+        </a>
+        <a href="keranjang.html" class="cart" aria-label="Keranjang pesanan">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <circle cx="9" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+            <path d="M6 6 5 3H2" />
+          </svg>
+          <b id="cartCount">0</b>
+        </a>
+        <button class="burger" id="burger" aria-label="Buka menu">Menu</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION FULL IMAGE (images/hero.png) -->
+      <section class="hero" id="home">
+        <img
+          class="hero-bg"
+          src="images/hero.jpg"
+          alt="DN Lite Fresh Wine Coffee Gayo Arabica"
+        />
+        <div class="hero-overlay"></div>
+
+        <div class="hero-text">
+          <p class="small" data-i18n="hero_eyebrow">Gayo Specialty Premium</p>
+          <h1 data-i18n="hero_title">
+            Rasa Murni<br />dari Dataran<br />Tinggi Gayo
+          </h1>
+          <p class="sub" data-i18n="hero_sub">
+            100% Arabica Specialty, Single Origin Gayo<br />
+            Wine Coffee · Classic Arabika · Greenbeans
+          </p>
+          <a href="#produk" class="btn btn-gold" data-i18n="hero_cta"
+            >Belanja Sekarang</a
+          >
+        </div>
+
+        <p class="scroll">
+          From Sip to Spark — Face Your Mind with a Cup of Coffee
+        </p>
+      </section>
+
+      <!-- OUR STORY SECTION -->
+      <section class="story" id="tentang">
+        <div class="story-img">
+          <img
+            src="images/our-story.png"
+            alt="Pegunungan dataran tinggi Gayo berkabut"
+          />
+        </div>
+        <div class="story-text">
+          <p class="small" data-i18n="story_eyebrow">Tentang Kami</p>
+          <h2 data-i18n="story_title">
+            Dari Dataran Tinggi Gayo<br />ke Cangkir Anda
+          </h2>
+          <span class="rule"></span>
+          <p data-i18n="story_desc">
+            Kami menghadirkan kopi Gayo Arabica pilihan dari dataran tinggi Aceh
+            untuk para penikmat kopi maupun pelaku industri roastery yang
+            menghargai kualitas, keaslian, dan karakter rasa di setiap seduhan.
+          </p>
+          <a href="#proses" class="btn btn-dark" data-i18n="story_cta"
+            >Pelajari Selengkapnya</a
+          >
+        </div>
+      </section>
+
+      <!-- STATS BAR -->
+      <section class="stats" aria-label="Keunggulan">
+        <div>
+          <b>100%</b>
+          <span data-i18n="stat_1">Arabica Specialty Gayo</span>
+        </div>
+        <div>
+          <b>4</b>
+          <span data-i18n="stat_2">Varian Produk Pilihan</span>
+        </div>
+        <div>
+          <b>Single</b>
+          <span data-i18n="stat_3">Origin Dataran Tinggi Aceh</span>
+        </div>
+        <div>
+          <b>Fresh</b>
+          <span data-i18n="stat_4">Roast &amp; Sortasi Ketat</span>
+        </div>
+      </section>
+
+      <!-- PRODUCTS SECTION (4 VARIAN PRODUK) -->
+      <section class="products-wrap" id="produk">
+        <div class="section-head">
+          <p class="small" data-i18n="prod_eyebrow">Produk Kami</p>
+          <h2 data-i18n="prod_title">Koleksi Kopi Gayo Pilihan</h2>
+        </div>
+
+        <div class="product-cards">
+          <!-- 1. Wine Coffee (Specialty) -->
+          <article class="p-card">
+            <div class="p-thumb">
+              <img
+                src="images/box-front.jpg"
+                alt="Wine Coffee (Specialty) 250 gr"
+              />
+              <span class="badge">Specialty</span>
+            </div>
+            <div class="p-meta">
+              <div>
+                <h3>Wine Coffee (Specialty)</h3>
+                <p class="p-sub" data-i18n="p1_sub">
+                  Fermentasi Wine · Medium Roast · 250 gr
+                </p>
+              </div>
+              <div class="p-actions">
+                <button
+                  class="btn btn-dark add"
+                  data-name="Wine Coffee (Specialty) 250 gr"
+                  data-i18n="btn_add"
+                >
+                  + Pesan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Classic Arabika Bold -->
+          <article class="p-card">
+            <div class="p-thumb dark-bg">
+              <img
+                src="images/box-side.jpg"
+                alt="Classic Arabika Bold"
+                style="object-position: 50% 35%"
+              />
+              <span class="badge">Bold</span>
+            </div>
+            <div class="p-meta">
+              <div>
+                <h3>Classic Arabika Bold</h3>
+                <p class="p-sub" data-i18n="p2_sub">
+                  Body Tebal · Medium-Dark Roast · 250 gr
+                </p>
+              </div>
+              <div class="p-actions">
+                <button
+                  class="btn btn-dark add"
+                  data-name="Classic Arabika Bold (250 gr)"
+                  data-i18n="btn_add"
+                >
+                  + Pesan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Classic Arabika Lite -->
+          <article class="p-card">
+            <div class="p-thumb">
+              <img src="images/box-art.jpg" alt="Classic Arabika Lite" />
+              <span class="badge">Lite</span>
+            </div>
+            <div class="p-meta">
+              <div>
+                <h3>Classic Arabika Lite</h3>
+                <p class="p-sub" data-i18n="p3_sub">
+                  Aroma Floral &amp; Halus · Light-Medium · 250 gr
+                </p>
+              </div>
+              <div class="p-actions">
+                <button
+                  class="btn btn-dark add"
+                  data-name="Classic Arabika Lite (250 gr)"
+                  data-i18n="btn_add"
+                >
+                  + Pesan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Greenbeans -->
+          <article class="p-card">
+            <div class="p-thumb">
+              <img src="images/box-back.jpg" alt="Greenbeans Gayo Arabica" />
+              <span class="badge">Raw Beans</span>
+            </div>
+            <div class="p-meta">
+              <div>
+                <h3>Greenbeans</h3>
+                <p class="p-sub" data-i18n="p4_sub">
+                  Biji Kopi Mentah Sortasi Grade 1 · 1 kg
+                </p>
+              </div>
+              <div class="p-actions">
+                <button
+                  class="btn btn-dark add"
+                  data-name="Greenbeans Gayo Arabica (1 kg)"
+                  data-i18n="btn_add"
+                >
+                  + Pesan
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Detail Kemasan & Galeri Interaktif -->
+        <div class="products-detail">
+          <div class="gallery">
+            <img
+              id="mainImg"
+              src="images/box-front.jpg"
+              alt="Detail Kemasan Wine Coffee (Specialty) 250 gr"
+            />
+            <div class="thumbs" role="tablist">
+              <button
+                class="on"
+                data-src="images/box-front.jpg"
+                aria-label="Tampak Depan"
+              >
+                <img src="images/box-front.jpg" alt="" />
+              </button>
+              <button
+                data-src="images/box-back.jpg"
+                aria-label="Tampak Belakang"
+              >
+                <img src="images/box-back.jpg" alt="" />
+              </button>
+              <button data-src="images/box-side.jpg" aria-label="Sisi Samping">
+                <img src="images/box-side.jpg" alt="" />
+              </button>
+              <button
+                data-src="images/box-spec.jpg"
+                aria-label="Tabel Spesifikasi"
+              >
+                <img src="images/box-spec.jpg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="info">
+            <p class="small" data-i18n="spec_eyebrow">Detail Kemasan Utama</p>
+            <h3 data-i18n="spec_title">Wine Coffee (Specialty)</h3>
+            <p class="lead" data-i18n="spec_lead">
+              Diproduksi oleh
+              <strong>DN Lite Coffee </strong>. Dikemas eksklusif untuk menjaga
+              kompleksitas aroma khas fermentasi wine.
+            </p>
+            <table class="spec">
+              <tr>
+                <th data-i18n="th_ing">Komposisi</th>
+                <td>100% Arabica Specialty Coffee</td>
+              </tr>
+              <tr>
+                <th data-i18n="th_bean">Biji Kopi</th>
+                <td>Gayo Arabica Specialty, Single Origin, Wine Process</td>
+              </tr>
+              <tr>
+                <th data-i18n="th_grind">Ukuran Giling</th>
+                <td>Medium (Tersedia Whole Bean)</td>
+              </tr>
+              <tr>
+                <th data-i18n="th_roast">Level Sangrai</th>
+                <td>Medium</td>
+              </tr>
+              <tr>
+                <th data-i18n="th_acid">Tingkat Keasaman</th>
+                <td>
+                  <span class="dots" aria-label="4 dari 5">
+                    <i></i><i></i><i></i><i></i><i class="off"></i>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <th data-i18n="th_weight">Berat Bersih</th>
+                <td>250 gr</td>
+              </tr>
+            </table>
+            <div class="buy">
+              <button
+                class="btn btn-dark add"
+                data-name="Wine Coffee (Specialty) 250 gr"
+                data-i18n="btn_add_long"
+              >
+                Tambah ke Pesanan
+              </button>
+              <span class="halal">Halal · P-IRT 8081104010185-30</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOOD PANELS -->
+      <section class="moods" id="cerita">
+        <figure>
+          <img
+            src="images/box-art.jpg"
+            alt="Ilustrasi seduhan barista DN Lite"
+          />
+          <figcaption>Good Coffee<br />Better Days</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/our-story-2.jpg"
+            alt="Panorama Danau Lut Tawar dan perbukitan Gayo"
+          />
+          <figcaption>100% Gayo Specialty Coffee</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="images/box-side.jpg"
+            alt="Detail foil kemasan DN Lite"
+            style="object-position: 50% 42%"
+          />
+          <figcaption>Classic<br />Simple Luxury</figcaption>
+        </figure>
+      </section>
+
+      <!-- PROCESS SECTION -->
+      <section class="process" id="proses">
+        <p class="small" data-i18n="proc_eyebrow">Proses Kami</p>
+        <h2 data-i18n="proc_title">Dari Kebun ke Cangkir</h2>
+        <ol>
+          <li>
+            <span>01</span>
+            <h3 data-i18n="p_step1_t">Seleksi Greenbeans Gayo</h3>
+            <p data-i18n="p_step1_d">
+              Biji kopi Arabica pilihan dari dataran tinggi Gayo yang disortasi
+              ketat untuk kualitas ekspor maupun sangrai.
+            </p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3 data-i18n="p_step2_t">Wine &amp; Classic Process</h3>
+            <p data-i18n="p_step2_d">
+              Fermentasi wine terkontrol untuk seri Specialty, serta pengolahan
+              klasik untuk profil Bold dan Lite.
+            </p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3 data-i18n="p_step3_t">Sangrai Presisi</h3>
+            <p data-i18n="p_step3_d">
+              Disangrai sesuai karakter masing-masing varian agar cita rasa
+              optimal.
+            </p>
+          </li>
+          <li>
+            <span>04</span>
+            <h3 data-i18n="p_step4_t">Kemasan Eksklusif</h3>
+            <p data-i18n="p_step4_d">
+              Dikemas dalam kotak bertekstur elegan dengan aksen emas hangat
+              untuk menjaga kesegaran aroma.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- QUOTE BANNER -->
+      <section class="quote">
+        <blockquote>
+          “From Sip to Spark: Face your mind with a cup of coffee.”
+        </blockquote>
+        <p>DN Lite — Gayo Highlands</p>
+      </section>
+
+      <!-- INSTAGRAM FEED -->
+      <section class="feed" aria-label="Instagram Feed Concept">
+        <div class="feed-head">
+          <p class="small">Instagram</p>
+          <h2>@dnlite</h2>
+          <p data-i18n="feed_desc">
+            Kisah kebun dataran tinggi Gayo, ritual seduh harian, dan apresiasi
+            untuk para petani lokal.
+          </p>
+          <a
+            href="https://instagramm/dnlite"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-dark"
+            style="margin-top: 1.8rem"
+            data-i18n="feed_cta"
+            >Ikuti @dnlite</a
+          >
+        </div>
+
+        <div class="feed-grid">
+          <div class="f dark">
+            <img class="lg" src="images/logo-light.png" alt="" />
+            <span>Gayo Specialty<br />Premium</span>
+          </div>
+          <div class="f">
+            <img src="images/box-front.jpg" alt="" />
+          </div>
+          <div class="f">
+            <img src="images/our-story.jpg" alt="" />
+          </div>
+          <div class="f">
+            <img src="images/box-art.jpg" alt="" />
+          </div>
+          <div class="f light">
+            <img class="lg" src="images/logo-dark.png" alt="" />
+          </div>
+          <div class="f">
+            <img
+              src="images/box-side.jpg"
+              alt=""
+              style="object-position: 50% 35%"
+            />
+          </div>
+          <div class="f dark">
+            <span
+              >The best coffee comes from healthy land &amp; happy
+              farmers.</span
+            >
+          </div>
+          <div class="f">
+            <img src="images/box-back.jpg" alt="" />
+          </div>
+          <div class="f light">
+            <span>Small Steps,<br />Big Impact</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="kontak">
+      <div class="f-brand">
+        <a href="#home" class="logo">
+          <img class="mark" src="images/logo-light.png" alt="" />
+          <span>LITE</span>
+        </a>
+        <p class="tag">Classic<br />Simple Luxury</p>
+        <div class="palette" aria-label="Color Palette Mockup">
+          <i style="background: #1e1915" title="Espresso Dark"></i>
+          <i style="background: #6e6357" title="Warm Taupe"></i>
+          <i style="background: #a39585" title="Warm Sand"></i>
+          <i style="background: #e8e1d5" title="Soft Cream"></i>
+          <i style="background: #c8ab7b" title="Champagne Gold"></i>
+        </div>
+      </div>
+
+      <div class="f-col">
+        <h4 data-i18n="foot_contact">Kontak &amp; Legalitas</h4>
+        <p>WhatsApp: 0853-7277-7912</p>
+        <p>Instagram: @dnlite</p>
+        <p class="mini">
+          Produced by DN Lite Coffee<br />
+          Halal Certified · P-IRT 8081104010185-30
+        </p>
+      </div>
+
+      <div class="f-col">
+        <h4 data-i18n="foot_order">Pesanan Anda</h4>
+        <p id="orderNote" data-i18n="order_empty">Belum ada produk dipilih.</p>
+        <a href="#" class="btn btn-gold" id="wa" data-i18n="foot_wa"
+          >Pesan via WhatsApp</a
+        >
+      </div>
+
+      <p class="copy">
+        © 2026 DN Lite — Premium Gayo Coffee. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- TOMBOL MELAYANG BAHASA (ID / EN) DI POJOK KANAN BAWAH -->
+    <div class="lang-float" role="group" aria-label="Pilih Bahasa">
+      <button type="button" class="lang-btn active" data-lang="id">ID</button>
+      <span class="lang-sep">/</span>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
